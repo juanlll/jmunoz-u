@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle Persona</title>
+</head>
+<body>
+<h1>Detalle de la persona</h1>
+<div>
+    Id persona: {{ persona.id }}
+</div>
+<div>
+    Nombre persona: {{ persona.nombre }}
+</div>
+<div>
+    apellido persona: {{ persona.apellido }}
+</div>
+<div>
+    email persona: {{ persona.email }}
+</div>
+
+<a href="{% url 'index' %}">Regresar al inicio</a>
+</body>
+</html>

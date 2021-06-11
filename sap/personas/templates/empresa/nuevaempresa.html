@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva empresa</title>
+</head>
+<body>
+<h1>Agregar una nueva empresa</h1>
+<form method="post">
+    {{ formaEmpresa }}
+    <button type="submit">Enviar</button>
+    {% csrf_token %}
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle de direcciones</title>
+</head>
+<body>
+<div><a href="nuevo_domicilio">Agregar Dirección</a></div>
+<div>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Calle</th>
+            <th>Numero de calle</th>
+            <th>Pais</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for direccion in Direccion %}
+            <tr>
+                <td>{{ direccion.id }}</td>
+                <td>{{ direccion.calle }}</td>
+                <td>{{ direccion.no_calle }}</td>
+                <td>{{ direccion.pais }}</td>
+                <td><a href="detalle_persona/{{ direccion.id }}">Ver detalle</a></td>
+                <td><a href="editar_domicilio/{{ direccion.id }}">Editar</a></td>
+                <td><a href="eliminar_persona/{{ direccion.id }}">Eliminar</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    direccion{{ direccion.id }}:
+    {{ direccion.calle }}
+    {{ direccion.no_calle }}
+    {{ direccion.pais }}
+
+</div>
+</body>
+</html>

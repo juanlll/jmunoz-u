@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle empresa</title>
+</head>
+<body>
+<h1>Listado de empresas</h1>
+
+<div><a href="nueva_empresa">Agregar Empresa</a></div>
+<div>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Empresa</th>
+            <th>Puesto</th>
+            <th>Salario</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for empresa in Empresa %}
+            <tr>
+                <td>{{ empresa.id }}</td>
+                <td>{{ empresa.nombre_empresa }}</td>
+                <td>{{ empresa.puesto }}</td>
+                <td>{{ empresa.salario }}</td>
+                <td><a href="editar_empresa/{{ empresa.id }}">Editar</a></td>
+                <td><a href="eliminar_persona/{{ empresa.id }}">Eliminar</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    empresa{{ empresa.id }}:
+    {{ empresa.nombre_empresa }}
+    {{ empresa.puesto }}
+    {{ empresa.salario }}
+
+</div>
+</body>
+</html>
